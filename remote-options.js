@@ -19,7 +19,7 @@
       });
     };
     _.each(urlValues, function (selector, key) {
-      $(selector).change(updateOptions);
+      $(selector).on('remote-options:changed change', updateOptions);
     });
     updateOptions();
   };
